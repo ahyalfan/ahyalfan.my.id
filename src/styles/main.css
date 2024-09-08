@@ -1,0 +1,7 @@
+@import './base.css';
+
+
+@font-face {
+    font-family: inter-black;
+    src: url(font/Inter-Black.ttf);
+}
