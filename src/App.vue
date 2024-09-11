@@ -1,7 +1,15 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import Layout from './layouts/Layout.vue'
+import { RouterLink, RouterView } from "vue-router";
+import Layout from "./layouts/Layout.vue";
+import { onMounted } from "vue";
+import { usePreferredDark } from "@vueuse/core";
 
+onMounted(() => {
+  const isDark = usePreferredDark();
+  if (isDark) {
+    app.classList.toggle("dark");
+  }
+});
 </script>
 
 <template>
@@ -12,6 +20,4 @@ import Layout from './layouts/Layout.vue'
   </div>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

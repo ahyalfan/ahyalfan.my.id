@@ -2,6 +2,6 @@
 
 <template>
   <main>
-    <h1 class="dark:text-green-700 text-black">Test</h1>
+    <h1 class="dark:text-green-700 text-black">Home</h1>
   </main>
 </template>

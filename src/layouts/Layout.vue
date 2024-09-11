@@ -1,18 +1,36 @@
 <script setup>
-import ContainerLayout from './sidebar/ContainerLayout.vue';
-import { useDrawerStore } from '@/stores/drawer';
-const store = useDrawerStore();
-const openDrawer = () => {
-  store.openDrawer()
-};
+import { ref, watch } from "vue";
+import MenuIcon from "./icon/MenuIcon.vue";
+import ContainerLayout from "./sidebar/ContainerLayout.vue";
+import { useDrawerStore } from "@/stores/drawer";
+import { useElementHover } from "@vueuse/core";
+import Bars3Icon from "./icon/Bars3Icon.vue";
 
+const store = useDrawerStore();
+const open = ref(false);
+
+const elementHover = ref();
+const hover = useElementHover(elementHover);
+
+const openDrawer = () => {
+  store.openDrawer();
+};
 </script>
 
 <template>
-    <header class="bg-slate-200 dark:bg-color-2">
-      <el-button type="primary" style="margin-left: 16px" @click="openDrawer()">
-        open
-    </el-button>
-      <ContainerLayout/>
-    </header>
+  <header class="m-2">
+    <button ref="elementHover" class="px-3 py-1 bg-slate-200 rounded-md dark:bg-color-2">
+      <MenuIcon
+        v-show="!hover"
+        class="size-6 text-color-2 dark:text-slate-200 transition-transform duration-300"
+        @click="openDrawer()"
+      />
+      <Bars3Icon
+        v-show="hover"
+        class="size-6 text-color-2 dark:text-slate-200 transition-transform duration-300"
+        @click="openDrawer()"
+      />
+    </button>
+    <ContainerLayout />
+  </header>
 </template>

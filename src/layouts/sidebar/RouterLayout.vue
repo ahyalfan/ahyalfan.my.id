@@ -6,7 +6,7 @@ const openDrawer = () => {
 };
 </script>
 <template>
-    <nav>
+    <nav class="bg-slate-200 text-slate-600 dark:bg-color-1 dark:text-slate-400">
         <RouterLink to="/" @click="openDrawer()">Home</RouterLink>
         <RouterLink to="/about" @click="openDrawer()">About</RouterLink>
     </nav>

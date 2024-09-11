@@ -1,24 +1,42 @@
 <script setup>
-import { ref } from 'vue'
-import ThemeToggleLayout from './ThemeToggleLayout.vue';
-import { useDrawerStore } from '@/stores/drawer';
-import RouterLayout from './RouterLayout.vue';
+import { ref } from "vue";
+import ThemeToggleLayout from "./ThemeToggleLayout.vue";
+import { useDrawerStore } from "@/stores/drawer";
+import RouterLayout from "./RouterLayout.vue";
+import CloseIcon from "../icon/CloseIcon.vue";
+import LogoIcon from "../icon/LogoIcon.vue";
 const store = useDrawerStore();
 </script>
 
 <template>
-    <el-drawer class="bg-slate-200 dark:bg-color-2" v-model="store.drawer" :show-close="false" direction="ltr" size="">
+  <!-- custom content drawer -->
+  <el-drawer
+    class="bg-slate-200 dark:bg-color-2"
+    v-model="store.drawer"
+    direction="ltr"
+    title="I am the title"
+    :with-header="false"
+    size="250"
+  >
+    <div
+      class="flex items-end mb-8 p-1 rounded-md py-2 pb-4 bg-slate-200 dark:bg-color-1"
+    >
+      <LogoIcon class="size-16" />
+      <h4 class="ml-1 text-2xl tracking-wide font-mono font-semibold dark:text-color-4">
+        hyalfan
+      </h4>
+    </div>
 
-    <template #header="{ close, titleId, titleClass }">
-        <h4 :id="titleId" :class="titleClass">This is a custom header!</h4>
-        <el-button type="danger" @click="close">
-          <el-icon class="el-icon--left"><CircleCloseFilled /></el-icon>
-          Close
-        </el-button>
-    </template>
-    
-    <ThemeToggleLayout />
+    <div
+      class="mb-4 text-color-1 bg-slate-200 p-2 py-2 rounded-md tracking-wide dark:bg-color-1 dark:text-white"
+    >
+      Hello World!
+    </div>
+
+    <ThemeToggleLayout class="mb-4" />
+
     <RouterLayout />
-
   </el-drawer>
 </template>
+
+<style scoped></style>
