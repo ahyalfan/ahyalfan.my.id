@@ -3,12 +3,12 @@ import { computed, onMounted, ref, watch } from "vue";
 import { useBattery } from "@vueuse/core";
 import { Lightning } from "@element-plus/icons-vue";
 
-const { charging, chargingTime, dischargingTime, level } = useBattery();
+const { isSupported, charging, chargingTime, dischargingTime, level } = useBattery();
 const batteryLevel = ref(computed(() => Math.floor(level.value * 100)));
 const color = ref("#f56c6c");
 
 watch(batteryLevel, () => {
-  if (batteryLevel.value >= 80) color.value = "#6f7ad3";
+  if (batteryLevel.value >= 80) color.value = "#17c943";
   else if (batteryLevel.value >= 60) color.value = "#1989fa";
   else if (batteryLevel.value >= 40) color.value = "#5cb87a";
   else if (batteryLevel.value >= 20) color.value = "#e6a23c";
@@ -17,10 +17,10 @@ watch(batteryLevel, () => {
 </script>
 
 <template>
-  <div class="flex items-center">
+  <div v-if="isSupported" class="flex items-center">
     <!-- Battery Container -->
     <div
-      class="relative w-20 h-8 border-2 border-gray-400 rounded-md bg-slate-50 dark:bg-slate-200 flex items-center"
+      class="relative w-[52px] h-7 border-2 border-gray-400 rounded-md bg-slate-50 dark:bg-slate-200 flex items-center"
     >
       <!-- Battery Level -->
       <div
@@ -39,7 +39,7 @@ watch(batteryLevel, () => {
     <!-- Charging Indicator -->
     <span
       v-show="charging"
-      class="ml-2 text-slate-600 flex items-center gap-0.5 dark:text-slate-400"
+      class="ml-1 text-cyan-700 dark:text-cyan-400 font-medium flex items-center gap-0.5 dark:text-slate-400"
       >{{ batteryLevel }}
       <el-icon><Lightning /></el-icon>
     </span>

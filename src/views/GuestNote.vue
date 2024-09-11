@@ -2,6 +2,6 @@
 
 <template>
   <main>
-    <h1 class="dark:text-green-700 text-black">contact</h1>
+    <h1 class="dark:text-green-700 text-black">guest</h1>
   </main>
 </template>
