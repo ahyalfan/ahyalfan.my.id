@@ -7,56 +7,86 @@ import Service from "../icon/menu/Service.vue";
 import Portofolio from "../icon/menu/Portofolio.vue";
 import GuestNote from "../icon/menu/GuestNote.vue";
 import Contact from "../icon/menu/Contact.vue";
-import { ref } from "vue";
+import { onMounted, ref, watch } from "vue";
+import { useRoute } from "vue-router";
 const store = useDrawerStore();
 
 const openDrawer = () => {
   store.openDrawer();
 };
-const routerClass = ref({
-  "hover:text-color-3": true,
-  group: true,
-});
-const arrowClass = ref({
-  "transition-transform": true,
-  "duration-300": true,
-  "group-hover:translate-x-1": true,
-  "group-hover:-translate-y-0.5": false,
-  "group-hover:-rotate-6": false,
-});
+
+const routerApp = useRoute();
 
 const routerComponents = ref([
   {
     id: 1,
     path: "/",
     component: "Home",
+    style: {
+      "text-color-3": false,
+    },
   },
   {
     id: 2,
     path: "/about",
     component: "About",
+    style: {
+      "text-color-3": false,
+    },
   },
   {
     id: 3,
     path: "/service",
     component: "Service",
+    style: {
+      "text-color-3": false,
+    },
   },
   {
     id: 4,
     path: "/portofolio",
     component: "Portofolio",
+    style: {
+      "text-color-3": false,
+    },
   },
   {
     id: 5,
     path: "/guest-note",
     component: "GuestNote",
+    style: {
+      "text-color-3": false,
+    },
   },
   {
     id: 6,
     path: "/contact",
     component: "Contact",
+    style: {
+      "text-color-3": false,
+    },
   },
 ]);
+watch(
+  () => routerApp.path,
+  (newPath, oldPath) => {
+    routerComponents.value.forEach((element) => {
+      if (element.path == newPath) {
+        element.style["text-color-3"] = true;
+      }
+      if (element.path == oldPath) {
+        element.style["text-color-3"] = false;
+      }
+    });
+  }
+);
+onMounted(() => {
+  routerComponents.value.forEach((element) => {
+    if (element.path == routerApp.path) {
+      element.style["text-color-3"] = true;
+    }
+  });
+});
 </script>
 <template>
   <nav
@@ -68,6 +98,7 @@ const routerComponents = ref([
       :to="router.path"
       @click="openDrawer()"
       class="flex justify-between items-center hover:text-color-3 group"
+      :class="router.style"
     >
       <div class="flex items-center">
         <!-- <Home class="size-6 mr-2 group-hover:-rotate-6" /> -->
