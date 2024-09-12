@@ -13,7 +13,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="dark:bg-color-1 transition-colors min-h-screen flex">
+  <div class="bg-color-4 dark:bg-color-1 transition-colors min-h-screen flex">
     <Layout />
 
     <RouterView />

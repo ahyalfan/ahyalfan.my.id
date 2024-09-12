@@ -1,7 +1,12 @@
-<script setup></script>
+<script setup>
+import TitleComponent from "@/components/common/TitleComponent.vue";
+import NoodleIcon from "@/components/icon/NoodleIcon.vue";
+</script>
 
 <template>
-  <main>
-    <h1 class="dark:text-green-700 text-black">guest</h1>
+  <main class="mt-20 mx-6 text-black dark:text-color-4">
+    <TitleComponent t1="Guest" t2="Room">
+      <NoodleIcon class="size-14" />
+    </TitleComponent>
   </main>
 </template>

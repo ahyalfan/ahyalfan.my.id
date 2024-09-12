@@ -1,15 +1,14 @@
+<script setup>
+import TitleComponent from "@/components/common/TitleComponent.vue";
+import LampuIcon from "@/components/icon/LampuIcon.vue";
+</script>
+
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+  <main class="mt-20 mx-6 text-black dark:text-color-4">
+    <TitleComponent t1="About" t2="Me">
+      <LampuIcon class="size-14" />
+    </TitleComponent>
+  </main>
 </template>
 
-<style>
-@media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
-}
-</style>
+<style scoped></style>
