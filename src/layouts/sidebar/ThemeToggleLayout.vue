@@ -25,7 +25,7 @@ watch(darkMode, () => {
     </h6>
     <button
       @click="setDark"
-      class="p-0 w-[52px] size-6 rounded-full flex items-center justify-end bg-[#F2F2F2] dark:bg-[#2C2C2C] border-slate-500 border transition-all duration-300"
+      class="p-0 w-[50px] size-6 rounded-full flex items-center justify-end bg-[#F2F2F2] dark:bg-[#2C2C2C] border-slate-500 border transition-all duration-300"
     >
       <div
         id="testDarMode"
@@ -39,6 +39,6 @@ watch(darkMode, () => {
 </template>
 <style scoped>
 .-translate-x-7 {
-  transform: translateX(-28px); /* Custom value for -translate-x-7 */
+  transform: translateX(-26px); /* Custom value for -translate-x-7 */
 }
 </style>
