@@ -32,12 +32,12 @@ const store = useDrawerStore();
 
         <ThemeToggleLayout class="mb-10" />
 
-        <div class="items-end mb-4 p-1 rounded-md pb-6 bg-slate-200 dark:bg-color-1">
+        <div class="items-end mb-4 p-2 rounded-md pb-6 bg-slate-200 dark:bg-color-1">
           <h4 class="my-2 text-xl font-medium text-center tracking-wide text-color-3">
-            Hello Everyone
+            Welcome to My Profile! 🚀
           </h4>
-          <p class="text-justify px-2 text-slate-600 dark:text-slate-400">
-            Hello i'am Ahmad Yogi Al Fandi, Fullstack Developer Based In Indonesia
+          <p class="text-center px-2 text-slate-600 dark:text-slate-400">
+            Update on: 10 Sept 2024
           </p>
         </div>
 

@@ -1,5 +1,5 @@
 <script setup>
-import { ref, watch } from "vue";
+import { onMounted, ref, watch } from "vue";
 import MenuIcon from "./icon/MenuIcon.vue";
 import ContainerLayout from "./sidebar/ContainerLayout.vue";
 import { useDrawerStore } from "@/stores/drawer";
@@ -18,17 +18,19 @@ const openDrawer = () => {
 </script>
 
 <template>
-  <header class="m-2">
-    <button ref="elementHover" class="px-3 py-1 bg-slate-200 rounded-md dark:bg-color-2">
+  <header class="m-5 absolute">
+    <button
+      @click="openDrawer()"
+      ref="elementHover"
+      class="px-3 py-1 bg-slate-200 rounded-md dark:bg-color-2"
+    >
       <MenuIcon
         v-show="!hover"
         class="size-6 text-color-2 dark:text-slate-200 transition-transform duration-300"
-        @click="openDrawer()"
       />
       <Bars3Icon
         v-show="hover"
         class="size-6 text-color-2 dark:text-slate-200 transition-transform duration-300"
-        @click="openDrawer()"
       />
     </button>
     <ContainerLayout />
