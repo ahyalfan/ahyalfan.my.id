@@ -90,7 +90,7 @@ onMounted(() => {
 </script>
 <template>
   <nav
-    class="flex flex-col gap-6 bg-slate-200 text-slate-600 dark:bg-color-1 dark:text-slate-400"
+    class="flex flex-col gap-5 bg-slate-200 text-slate-600 dark:bg-color-1 dark:text-slate-400"
   >
     <RouterLink
       v-for="router in routerComponents"

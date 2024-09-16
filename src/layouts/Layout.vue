@@ -18,11 +18,11 @@ const openDrawer = () => {
 </script>
 
 <template>
-  <header class="m-5 absolute">
+  <header class="m-5 z-50 fixed">
     <button
       @click="openDrawer()"
       ref="elementHover"
-      class="px-3 py-1 bg-slate-200 rounded-md dark:bg-color-2"
+      class="px-3 py-1 bg-slate-300 rounded-md dark:bg-color-2"
     >
       <MenuIcon
         v-show="!hover"

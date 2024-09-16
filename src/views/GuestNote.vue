@@ -4,7 +4,7 @@ import NoodleIcon from "@/components/icon/NoodleIcon.vue";
 </script>
 
 <template>
-  <main class="mt-20 mx-6 text-black dark:text-color-4">
+  <main class="mt-16 mx-6 text-black dark:text-color-4">
     <TitleComponent t1="Guest" t2="Room">
       <NoodleIcon class="size-14" />
     </TitleComponent>

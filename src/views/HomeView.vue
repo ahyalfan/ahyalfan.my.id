@@ -10,7 +10,7 @@ import { ref } from "vue";
     <div
       class="flex items-end justify-center w-screen h-96 bg-[url('@/assets/icon/IconBg1.svg')] bg-no-repeat bg-top"
     >
-      <img src="@/assets/icon/human1.svg" class="" />
+      <img src="@/assets/icon/human1.svg" class="size-10/12" />
     </div>
     <div class="mx-6">
       <TheWelcomeComponent class="text-black dark:text-color-4" />
