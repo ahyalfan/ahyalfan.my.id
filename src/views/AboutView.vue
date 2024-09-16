@@ -1,14 +1,46 @@
 <script setup>
+import SkillsComponent from "@/components/about/SkillsComponent.vue";
 import TitleComponent from "@/components/common/TitleComponent.vue";
+import Human2Icon from "@/components/icon/human2Icon.vue";
 import LampuIcon from "@/components/icon/LampuIcon.vue";
+import ResumeIcon from "@/components/icon/resume/ResumeIcon.vue";
 </script>
 
 <template>
-  <main class="mt-20 mx-6 text-black dark:text-color-4">
-    <TitleComponent t1="About" t2="Me">
+  <main class="mt-16 text-black dark:text-color-4">
+    <TitleComponent class="mx-6" t1="About" t2="Me">
       <LampuIcon class="size-14" />
     </TitleComponent>
+    <div class="mx-6">
+      <div
+        class="flex items-end justify-center bg-[url('@/assets/icon/IconBg2.svg')] bg-no-repeat bg-cover bg-top"
+      >
+        <Human2Icon class="size-80 mt-2" />
+      </div>
+      <div class="mt-2 flex flex-col">
+        <p class="text-justify text-slate-600 dark:text-slate-400">
+          Hi, I'm Ahmad Yogi Al Fandi, a passionate Backend Developer. I specialize in
+          building and managing efficient backend systems for modern web applications. I
+          thrive in collaborative environments, excel at problem-solving, and stay current
+          with industry trends to continuously enhance my skills.
+        </p>
+        <div class="flex justify-center mt-4">
+          <button
+            class="flex items-center text-color-3 py-1.5 px-3 rounded-xl bg-color-buat-3 border-color-3 border-2"
+          >
+            <ResumeIcon class="h-6 w-6" />
+            Get Resume
+          </button>
+        </div>
+      </div>
+    </div>
+    <SkillsComponent />
   </main>
 </template>
 
-<style scoped></style>
+<style scoped>
+.bg-color-buat-3 {
+  background-color: rgba(154, 239, 243, 0.85);
+  font-weight: 630;
+}
+</style>
