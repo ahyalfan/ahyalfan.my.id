@@ -52,16 +52,16 @@ const routerComponents = ref([
   },
   {
     id: 5,
-    path: "/guest-note",
-    component: "GuestNote",
+    path: "/contact",
+    component: "Contact",
     style: {
       "text-color-3": false,
     },
   },
   {
     id: 6,
-    path: "/contact",
-    component: "Contact",
+    path: "/guest-note",
+    component: "GuestNote",
     style: {
       "text-color-3": false,
     },
