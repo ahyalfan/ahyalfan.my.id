@@ -15,7 +15,7 @@ onMounted(() => {
   <Transition>
     <main v-if="isVisible" class="mt-12 flex flex-col">
       <div
-        class="flex items-end justify-center w-screen h-96 bg-[url('@/assets/icon/IconBg1.svg')] bg-no-repeat bg-top"
+        class="flex items-end justify-center w-full h-96 bg-[url('@/assets/icon/IconBg1.svg')] bg-no-repeat bg-top"
       >
         <img src="@/assets/icon/human1.svg" class="size-10/12" />
       </div>
