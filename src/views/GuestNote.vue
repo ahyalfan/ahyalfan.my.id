@@ -1,4 +1,5 @@
 <script setup>
+import CommingSoonComponent from "@/components/common/CommingSoonComponent.vue";
 import TitleComponent from "@/components/common/TitleComponent.vue";
 import NoodleIcon from "@/components/icon/NoodleIcon.vue";
 </script>
@@ -8,5 +9,7 @@ import NoodleIcon from "@/components/icon/NoodleIcon.vue";
     <TitleComponent t1="Guest" t2="Room">
       <NoodleIcon class="size-14" />
     </TitleComponent>
+
+    <CommingSoonComponent />
   </main>
 </template>
