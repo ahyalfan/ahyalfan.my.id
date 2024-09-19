@@ -13,7 +13,7 @@
         viewBox="0 0 64 64"
         class="p-0 m-0 w-32 h-32 mx-auto animate-bounce"
         fill="none"
-        stroke="white"
+        stroke="#00ADB5"
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"

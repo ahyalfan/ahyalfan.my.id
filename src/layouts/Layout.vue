@@ -5,6 +5,7 @@ import ContainerLayout from "./sidebar/ContainerLayout.vue";
 import { useDrawerStore } from "@/stores/drawer";
 import { useElementHover } from "@vueuse/core";
 import Bars3Icon from "./icon/Bars3Icon.vue";
+import ContainerLayoutLg from "./sidebar/ContainerLayoutLg.vue";
 
 const store = useDrawerStore();
 const open = ref(false);
@@ -18,7 +19,7 @@ const openDrawer = () => {
 </script>
 
 <template>
-  <header class="m-5 z-50 fixed">
+  <header class="m-5 lg:hidden z-50 fixed">
     <button
       @click="openDrawer()"
       ref="elementHover"
@@ -34,5 +35,8 @@ const openDrawer = () => {
       />
     </button>
     <ContainerLayout />
+  </header>
+  <header class="p-5 w-60">
+    <ContainerLayoutLg class="hidden lg:inline" />
   </header>
 </template>
