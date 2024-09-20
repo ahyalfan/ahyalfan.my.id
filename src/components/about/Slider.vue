@@ -10,11 +10,12 @@ const sliders = ref(props.data);
 const quantityStyle = ref(
   computed(() => ({
     "--quantity": sliders.value.length,
+    // "--quantity": 5,
   }))
 );
 </script>
 <template>
-  <main class="m-auto w-screen px-6">
+  <main class="m-auto w-screen px-6 lg:w-[1000px] lg:px-0">
     <div
       class="slider"
       :reverse="props.reverse"

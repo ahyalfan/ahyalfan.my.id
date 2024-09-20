@@ -19,7 +19,7 @@ const openDrawer = () => {
 </script>
 
 <template>
-  <header class="m-5 lg:hidden z-50 fixed">
+  <header class="m-5 xl:hidden z-50 fixed">
     <button
       @click="openDrawer()"
       ref="elementHover"
@@ -36,7 +36,7 @@ const openDrawer = () => {
     </button>
     <ContainerLayout />
   </header>
-  <header class="p-5 w-60">
-    <ContainerLayoutLg class="hidden lg:inline" />
+  <header class="w-60 h-full hidden xl:inline">
+    <ContainerLayoutLg class="p-5 fixed w-60 h-screen" />
   </header>
 </template>

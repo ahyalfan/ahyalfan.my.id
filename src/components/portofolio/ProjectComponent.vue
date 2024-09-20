@@ -5,11 +5,9 @@ import { computed, ref, watch } from "vue";
 
 const store = usePortoStore();
 const props = defineProps(["data"]);
-const count = ref(
-  computed(() => {
-    return props.data.filter((arr) => arr.category == store.porto);
-  })
-);
+const count = computed(() => {
+  return props.data.filter((arr) => arr.category == store.porto);
+});
 </script>
 <template>
   <div

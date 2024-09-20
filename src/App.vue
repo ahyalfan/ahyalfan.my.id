@@ -16,7 +16,9 @@ onMounted(() => {
   <div class="bg-color-4 dark:bg-color-1 transition-colors min-h-screen flex">
     <Layout />
 
-    <RouterView />
+    <div class="xl:w-full xl:flex xl:justify-center">
+      <RouterView class="xl:w-[1000px]" />
+    </div>
   </div>
 </template>
 

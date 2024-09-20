@@ -4,6 +4,7 @@ import { useDrawerStore } from "@/stores/drawer";
 import RouterLayout from "./RouterLayout.vue";
 import LogoIcon from "../icon/LogoIcon.vue";
 import BatteryLayout from "./BatteryLayout.vue";
+import { onMounted } from "vue";
 const store = useDrawerStore();
 </script>
 

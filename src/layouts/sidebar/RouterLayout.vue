@@ -9,9 +9,16 @@ import GuestNote from "../icon/menu/GuestNote.vue";
 import Contact from "../icon/menu/Contact.vue";
 import { onMounted, ref, watch } from "vue";
 import { useRoute } from "vue-router";
+import { useWindowSize } from "@vueuse/core";
 const store = useDrawerStore();
 
+const { width, height } = useWindowSize();
+
 const openDrawer = () => {
+  if (width.value > 1031) {
+    return;
+  }
+
   store.openDrawer();
 };
 

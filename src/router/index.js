@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from '../views/HomeView.vue';
+import PortofolioView from '@/views/PortofolioView.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -31,6 +32,7 @@ const router = createRouter({
       path: '/portofolio',
       name: 'portofolio',
       component: () => import('../views/PortofolioView.vue'),
+      // component: PortofolioView,
     },
     {
       path: '/service',
