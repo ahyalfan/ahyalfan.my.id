@@ -2,7 +2,7 @@
 const props = defineProps(["data"]);
 </script>
 <template>
-  <div class="my-6">
+  <div class="my-6 md:flex flex-wrap">
     <div
       v-for="data in props.data"
       :key="data.id"
