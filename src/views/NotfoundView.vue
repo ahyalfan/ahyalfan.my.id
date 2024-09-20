@@ -21,3 +21,17 @@
 </template>
 
 <style scoped></style>
+
+<style scoped>
+/* we will explain what these classes do next! */
+.v-enter-active,
+.v-leave-active {
+  transition: all 700ms ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+  transform: translateX(-100px);
+}
+</style>
