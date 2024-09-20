@@ -17,7 +17,7 @@ onMounted(() => {
     <Layout />
 
     <div class="xl:w-full xl:flex xl:justify-center">
-      <RouterView class="xl:w-[1000px]" />
+      <RouterView class="xl:w-[1000px] 2xl:w-[1100px]" />
     </div>
   </div>
 </template>

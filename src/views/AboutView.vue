@@ -4,10 +4,15 @@ import TitleComponent from "@/components/common/TitleComponent.vue";
 import Human2Icon from "@/components/icon/human2Icon.vue";
 import LampuIcon from "@/components/icon/LampuIcon.vue";
 import ResumeIcon from "@/components/icon/resume/ResumeIcon.vue";
+import { isVisible } from "element-plus/es/utils";
+onMounted(() => {
+  isVisible.value = true;
+  console.log(isVisible.value);
+});
 </script>
 
 <template>
-  <main class="mt-16 text-black dark:text-color-4">
+  <main v-if="isVisible" class="mt-16 text-black dark:text-color-4">
     <TitleComponent class="mx-6" t1="About" t2="Me">
       <LampuIcon class="size-14" />
     </TitleComponent>
@@ -42,5 +47,16 @@ import ResumeIcon from "@/components/icon/resume/ResumeIcon.vue";
 .bg-color-buat-3 {
   background-color: rgba(154, 239, 243, 0.85);
   font-weight: 630;
+}
+/* we will explain what these classes do next! */
+.v-enter-active,
+.v-leave-active {
+  transition: all 700ms ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+  transform: translateX(-100px);
 }
 </style>
