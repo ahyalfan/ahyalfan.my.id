@@ -32,12 +32,13 @@ onMounted(() => {
             current with industry trends to continuously enhance my skills.
           </p>
           <div class="flex justify-center mt-4">
-            <button
+            <a
+              href="https://drive.google.com/file/d/1HQtdeLFtbP_Ul3ERO4XThPqEhqyRwP3g/view?usp=sharing"
               class="flex items-center text-color-3 py-1.5 px-3 rounded-xl bg-color-buat-3 border-color-3 border-2"
             >
               <ResumeIcon class="h-6 w-6" />
               Get Resume
-            </button>
+            </a>
           </div>
         </div>
       </div>
