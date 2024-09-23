@@ -21,7 +21,7 @@ export const portofolioData = [
     h1: 'Chat Room Management',
     p: 'Sebuah chat Room yang bisa membuat room dan masuk sebuah room, yang mana untuk bisa masuk harus login terlebih dahulu.',
     date: '....',
-    link: 'http://github.com/ahyalfan/chat-room',
+    link: 'https://github.com/ahyalfan/chat-room-management',
   },
   {
     img: 'https://media.licdn.com/dms/image/sync/v2/D5627AQFJ2ge8Cwqc7Q/articleshare-shrink_800/articleshare-shrink_800/0/1725249726701?e=1727103600&v=beta&t=PXmZJ_p94DyTQ0a5IXMfMvDqwsBs4WMfCCO9rgfHl6M',
