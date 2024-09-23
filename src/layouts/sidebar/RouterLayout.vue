@@ -108,13 +108,16 @@ onMounted(() => {
       :class="router.style"
     >
       <div class="flex items-center">
-        <!-- <Home class="size-6 mr-2 group-hover:-rotate-6" /> -->
-        <About
+        <Home
           v-if="router.component == 'Home'"
           class="size-6 mr-2 group-hover:-rotate-6"
         />
-        <Service
+        <About
           v-else-if="router.component == 'About'"
+          class="size-6 mr-2 group-hover:-rotate-6"
+        />
+        <Service
+          v-else-if="router.component == 'Service'"
           class="size-6 mr-2 group-hover:-rotate-6"
         />
         <Portofolio
