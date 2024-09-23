@@ -4,12 +4,16 @@ import TitleComponent from "@/components/common/TitleComponent.vue";
 import Human2Icon from "@/components/icon/human2Icon.vue";
 import LampuIcon from "@/components/icon/LampuIcon.vue";
 import ResumeIcon from "@/components/icon/resume/ResumeIcon.vue";
+import sendMessage from "@/util/telegram";
 import { onMounted, ref, Transition } from "vue";
 const isVisible = ref(false);
 onMounted(() => {
   isVisible.value = true;
   console.log(isVisible.value);
 });
+const sendTele = () => {
+  sendMessage();
+};
 </script>
 
 <template>
@@ -33,6 +37,7 @@ onMounted(() => {
           </p>
           <div class="flex justify-center mt-4">
             <a
+              @click="sendTele"
               href="https://drive.google.com/file/d/1HQtdeLFtbP_Ul3ERO4XThPqEhqyRwP3g/view?usp=sharing"
               class="flex items-center text-color-3 py-1.5 px-3 rounded-xl bg-color-buat-3 border-color-3 border-2"
             >
