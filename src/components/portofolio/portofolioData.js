@@ -31,4 +31,12 @@ export const portofolioData = [
     date: '....',
     link: 'https://github.com/ahyalfan/simple-pay',
   },
+  {
+    img: 'img/portofolio/nrello.png',
+    category: 'code',
+    h1: 'Sass App',
+    p: 'Nrello  aplikasi manajemen proyek yang dirancang untuk mempermudah pengelolaan tugas. Dengan antarmuka yang intuitif dan fitur yang kaya, Nrello membantu pengguna merencanakan, mengorganisir, dan melacak kemajuan proyek dengan cara yang efisien dan menyenangkan.',
+    date: '....',
+    link: 'https://github.com/ahyalfan/nuxt-saas-nrello',
+  },
 ];
