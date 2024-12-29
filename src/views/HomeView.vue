@@ -23,7 +23,7 @@ onMounted(() => {
         <TheWelcomeComponent class="text-black dark:text-color-4" />
         <ContentComponent class="text-slate-600 dark:text-slate-400 mt-2" />
       </div>
-      <div class="mx-6 my-3">
+      <div class="mx-6 my-3 mb-3">
         <MedsosComponent />
       </div>
     </main>

@@ -9,10 +9,9 @@ import { onMounted, ref, Transition } from "vue";
 const isVisible = ref(false);
 onMounted(() => {
   isVisible.value = true;
-  console.log(isVisible.value);
 });
-const sendTele = () => {
-  sendMessage();
+const sendTele = async () => {
+  await sendMessage();
 };
 </script>
 

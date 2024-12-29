@@ -7,7 +7,7 @@ import FacebookIcon from "../icon/medsos/FacebookIcon.vue";
 const classIcon = {
   "group-hover:-rotate-12": true,
   "transition-all": true,
-  "duration-300": true,
+  "duration-500": true,
   "dark:text-color-4": true,
   "group-hover:text-color-3": true,
 };

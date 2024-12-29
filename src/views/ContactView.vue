@@ -22,7 +22,7 @@ onMounted(() => {
           Just leave a message to get in touch.
         </p>
         <SendMessageComponent />
-        <MedsosComponent class="mt-6 justify-center" />
+        <MedsosComponent class="mt-6 mb-6 justify-center" />
       </div>
     </main>
   </Transition>
