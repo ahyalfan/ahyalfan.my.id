@@ -6,6 +6,7 @@ import LogoIcon from "../icon/LogoIcon.vue";
 import BatteryLayout from "./BatteryLayout.vue";
 import { onMounted } from "vue";
 const store = useDrawerStore();
+const dataDate = new Date().getFullYear();
 </script>
 
 <template>
@@ -42,7 +43,7 @@ const store = useDrawerStore();
       >
         <!-- <FooterLayout /> -->
         <footer class="m-0 p-0">
-          <p>&copy; 2024 Ahyalfan</p>
+          <p>&copy; {{dataDate}} Ahyalfan</p>
         </footer>
         <BatteryLayout />
       </footer>
