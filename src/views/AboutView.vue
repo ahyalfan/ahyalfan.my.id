@@ -37,7 +37,7 @@ const sendTele = async () => {
           <div class="flex justify-center mt-4">
             <a
               @click="sendTele"
-              href="https://drive.google.com/file/d/1HQtdeLFtbP_Ul3ERO4XThPqEhqyRwP3g/view?usp=sharing"
+              href="https://drive.google.com/file/d/1LVUWgP2MSN8tJomTyfhayq5Rdy0Vn239/view?usp=sharing"
               class="flex items-center text-color-3 py-1.5 px-3 rounded-xl bg-color-buat-3 border-color-3 border-2"
             >
               <ResumeIcon class="h-6 w-6" />
